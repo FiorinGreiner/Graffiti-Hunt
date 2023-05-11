@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="bootstrap.css"/>
+    <title>Graffiti Hunt</title>
+</head>
+
+<body>
+    <script>
+        numbFound = 0
+
+        function formSubmit() {
+            for (count = 0; count < 9; count++) {
+                if (huntForm.graffiti[count].checked) {
+                    numbFound++
+                }
+                
+            }
+            document.getElementById("score").innerHTML = ("You Found " + numbFound + "/9") 
+
+            numbFound = 0
+        }
+
+
+    </script>
+
+
+    <h1 id="justify-content-xxl-center" >Western Graffiti Hunt</h1>
+    <form name="huntForm" action="formSubmit()">
+
+        <input type="checkbox" value="Flat" Name="graffiti">
+        <label for="flat">Flat</label>
+        <br />
+
+        <input type="checkbox" value="Snail" Name="graffiti"/>
+        <label for="Snail">Snail</label>
+        <br />
+
+        <input type="checkbox" value="Home" Name="graffiti"/>
+        <label for="Home">Home</label>
+        <br />
+
+        <input type="checkbox" value="Love" Name="graffiti"/>
+        <label for="Love">Love</label>
+        <br />
+
+        <input type="checkbox" value="Cern" Name="graffiti"/>
+        <label for="Cern">Cern</label>
+        <br />
+
+        <input type="checkbox" value="Foggy" Name="graffiti"/>
+        <label for="Foggy">Fogy</label>
+        <br />
+
+        <input type="checkbox" value="Crawl" Name="graffiti"/>
+        <label for="Crawl">Crawl</label>
+        <br />
+
+        <input type="checkbox" value="Paris, Texas" Name="graffiti"/>
+        <label for="Paris, Texas">Paris, Texas</label>
+        <br />
+
+        <input type="checkbox" value="Volabe" Name="graffiti"/>
+        <label for="Volabe">Volabe</label>
+        <br />
+
+        <input type="button" onclick="formSubmit()" value="submit">
+
+    </form>
+
+    <h2 id="score"></h2>
+
+
+
+</body>
+</html>
